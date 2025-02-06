@@ -1,21 +1,22 @@
-
-
 .josefin-sans-normie {
     font-family: "Josefin Sans", serif;
     font-optical-sizing: auto;
     font-weight: <700>;
     font-style: normal;
-  }
-/* shared style */
-.text-primary{
+    }
+    /* shared style */
+    .secondary-background{
+        background-color:rgb(229, 225, 250);
+    }
+    .text-primary{
     color: mediumslateblue ;
-   
-}
-
-.dark-2{
+    
+    }
+    
+    .dark-2{
     color: dimgray;
-}
-.btn-primary{
+    }
+    .btn-primary{
     background-color: rgb(114, 45, 241);
     font-weight: bold;
     font-size: 20px;
@@ -23,58 +24,175 @@
     padding: 18px 35px;
     border-radius: 5px;
     border: none;
-}
-/* header */
-.header{
+    }
+
+    .section-title{
+        font-size: 60px;
+        font-weight: bold;
+        color:rgb(10, 5, 19);
+        text-align: center;
+    }
+    .section-description{
+        font-size: 33px;
+        color: darkslategray;
+    }
+    .text-centre{
+        text-align: center;
+    }
+    /* header */
+    .header{
     background-image: url('../images/developer.png'),url('../images/header_bg.png');
     background-repeat: no-repeat;
     background-position: top left, bottom right ;
-}
-
-/* Nav styles */
-nav{
-  display:flex;
-  align-items:center ;
-  justify-content: space-between;
-  margin: 30px 200px;
-}
-.nav-title{
+    background-size:  150px, 1100px;
+    }
+    
+    /* Nav styles */
+    nav{
+    display:flex;
+    align-items:center ;
+    justify-content: space-between;
+    margin: 30px 200px;
+    }
+    .nav-title{
     font-weight: 800;
     font-size: 50px;
-}
-nav ul{
+    }
+    nav ul{
     display: flex;
     align-items: center;
-}
-nav ul li{
+    }
+    nav ul li{
     list-style: none;
     margin-right: 50px;
-}
-nav li a{
+    }
+    nav li a{
     text-decoration: none;
     font-size: 20px;
-}
-/* banner styles */
-.banner{
-    display: flex;   
+    }
+    /* banner styles */
+    .banner{
+    display: flex;
     justify-content: space-between;
     margin : 0 25px 0 200px
-}
-.banner-content{
+    }
+    .banner-content{
     max-width:1300px;
-}
-.banner-greetings{
+    }
+    .banner-greetings{
     font-size: 45px;
     font: weight 600px;
-}
-.banner-tilte{
+    }
+    .banner-tilte{
     font-weight: bold;
     font-size: 85px;
-}
-.banner-description{
-    font-size: 29px;
-}
-.banner-profilepic{
-    width: 550px;
+    }
+    .banner-description{
+    font-size: 32px;
+    }
+    .banner-profilepic{
+        display: flex;
+        width: 1000px;
+    }
+/* main styles */
+ main{
+    max-width: 1140px ;
+    margin: 0 auto;
+ }
 
+ main section{
+    margin-top: 130px;
+    margin-bottom: 130px;
+ }
+/* about styles */
+    .about{
+        border-radius: 10px ;
+        padding: 130px 150px;
+        text-align: center;
+        margin-top: 130px;
+    }
+    .about-items{
+        display:flex;
+        justify-content: space-around;
+        
+    }
+    .about-item{
+        margin-right: 20px;
+        font-size: 22px;
+    }.item-title{
+        color: rgb(15, 31, 31);
+    }
+    .item-description{
+        font-weight:600;
+        color: darkslateblue;
+    }
+/* sills section styles */
+.skills-container{
+    display:flex;
+    gap: 24px;
+
+}
+.skill{
+    padding:30px ;
+    box-shadow: 0px 6px 50px 0px rgb(172, 160, 160);
+}
+/* resume section styles */
+.resume-column-title{
+    font-size: 30px;
+    color: indigo;
+}
+.resume-container{
+    
+    display: flex;
+    gap: 700px;
+}
+.experience-description{
+    color: rgb(51, 46, 46);
+}
+.experience-sub-title{
+    margin-top: 20px;
+    color: darkslategray;
+    font-size: 20px;
+}
+.resume hr{
+    margin: 30px 5px;
+}
+.resume-downlod-cv{
+    margin-top: 50px;
+    
+}
+/* footer style */
+footer{
+  padding: 130px 230px;
+  display: flex;
+  gap: 100px;
+}
+.footer-column{
+    width: 50%;
+}
+footer input[type="text"], footer input[type="email"]{
+    height: 64px;
+    border-radius: 5px;
+    background-color: cornsilk;
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom:24px ;
+    border: none;
+}
+footer textarea{
+    height: 100px;
+    width: 70%;
+    background-color: cornsilk;
+    display: block;
+    padding: 10px 20px;
+    margin-bottom:24px ;
+    border: none;
+    border-radius: 5px;
+}
+.sec-title{
+    font-size: 100px;
+}
+.sction-title{
+    font-size: 50px;
 }
