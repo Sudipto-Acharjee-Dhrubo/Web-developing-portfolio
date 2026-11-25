@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact · Sudipto Acharjee Dhrubo</title>
+  <meta name="description" content="Contact Sudipto Acharjee Dhrubo: email, phone, LinkedIn, GitHub and address in Dhaka, Bangladesh.">
+  <meta name="theme-color" content="#edeff4">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%233b2fff'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='28' text-anchor='middle' fill='white'%3ESD%3C/text%3E%3C/svg%3E">
+  <script>
+    /* Apply the saved or system theme before first paint to avoid a flash. */
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body class="page-contact">
+  <a class="skip" href="#contact">Skip to content</a>
+
+  <!-- ===== Navbar ===== -->
+  <header class="nav">
+    <a class="nav__brand" href="index.html" aria-label="Sudipto Acharjee Dhrubo, home">
+      <span class="nav__mark">SD</span>
+      <span class="nav__name">Sudipto Acharjee Dhrubo</span>
+    </a>
+    <nav class="nav__pill" aria-label="Primary">
+      <span class="nav__slider" aria-hidden="true"></span>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <button class="nav__menu" type="button" aria-expanded="false">Menu</button>
+  </header>
+
+  <button class="cord" type="button" aria-label="Switch between light and dark theme" title="Pull to switch theme">
+    <span class="cord__line"></span><span class="cord__bead"></span>
+  </button>
+
+  <main>
+    <section class="phead" aria-labelledby="ptitle">
+      <div class="phead__dots" aria-hidden="true"></div>
+      <div class="wrap phead__inner">
+        <p class="phead__prompt"><b>~/dhrubo</b> $ cat contact.txt<span class="phead__caret" aria-hidden="true"></span></p>
+        <h1 class="phead__title" id="ptitle">Contact</h1>
+        <figure class="cport">
+          <img src="assets/sudipto-sketch.jpg" width="900" height="1600" alt="Illustrated portrait of Sudipto Acharjee Dhrubo drawn over an engineering blueprint sheet" decoding="async" fetchpriority="high">
+        </figure>
+        <div class="phead__row">
+          <p class="phead__lede">I’m finishing my CSE degree at ULAB and open to internships, junior roles and projects worth building. Email is the quickest way to reach me.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cmain" id="contact" aria-label="Ways to reach me">
+      <div class="wrap cmain__grid">
+        <div>
+          <div class="cmail">
+            <p class="cmail__label">Write to me</p>
+            <a class="cmail__addr" href="mailto:sudipto200a2@gmail.com">sudipto200a2@gmail.com</a>
+            <div class="cmail__row">
+              <a class="cbtn cbtn--solid" href="mailto:sudipto200a2@gmail.com">Send an email</a>
+              <button class="cbtn" type="button" data-copy="sudipto200a2@gmail.com">Copy address</button>
+            </div>
+          </div>
+          <div class="chan">
+            <a class="crow" href="tel:+8801537355017"><span class="crow__k">Phone</span><span class="crow__v">01537355017</span><span class="crow__a" aria-hidden="true">↗</span></a>
+            <a class="crow" href="https://www.linkedin.com/in/sudiptoacharjeedhrubo/" target="_blank" rel="noopener"><span class="crow__k">LinkedIn</span><span class="crow__v">Sudipto Acharjee Dhrubo</span><span class="crow__a" aria-hidden="true">↗</span></a>
+            <a class="crow" href="https://github.com/Sudipto-Acharjee-Dhrubo" target="_blank" rel="noopener"><span class="crow__k">GitHub</span><span class="crow__v">Sudipto-Acharjee-Dhrubo</span><span class="crow__a" aria-hidden="true">↗</span></a>
+            <a class="crow crow--addr" href="https://www.google.com/maps/search/?api=1&amp;query=11+Satish+Sarker+Road+Gandaria+Dhaka+1204" target="_blank" rel="noopener"><span class="crow__k">Address</span><span class="crow__v">11 Satish Sarker Road,<br>Gandaria, Dhaka-1204</span><span class="crow__a" aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <div class="cside">
+          <form class="cform" data-form>
+            <h2>Send a message</h2>
+            <p class="cform__hint">This opens your email app with the message filled in.</p>
+            <label>Your name<input name="name" type="text" autocomplete="name" required></label>
+            <label>Your email<input name="from" type="email" autocomplete="email"></label>
+            <label>Message<textarea name="message" required></textarea></label>
+            <button class="cbtn cbtn--solid" type="submit">Open in email app</button>
+          </form>
+<pre class="ccode" aria-hidden="true"><span class="k">const</span> status = {
+  open: <span class="s">"internships, junior roles"</span>,
+  replies: <span class="s">"within a day or two"</span>,  <span class="c">// usually</span>
+  timezone: <span class="s">"Asia/Dhaka (UTC+6)"</span>,
+};</pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__grid">
+      <div class="foot__sig" aria-hidden="true" title="ধ্রুব (dhrubo): constant, fixed star">ধ্রুব</div>
+      <div>
+<pre class="foot__code"><span class="k">const</span> dhrubo = <span class="f">Object</span>.<span class="f">freeze</span>({
+  meaning: <span class="s">"constant"</span>,   <span class="c">// ধ্রুব, the fixed star</span>
+  keeps:   [<span class="s">"curiosity"</span>, <span class="s">"shipping"</span>],
+});</pre>
+        <div class="foot__links">
+          <a class="link-u" href="https://github.com/Sudipto-Acharjee-Dhrubo" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="link-u" href="https://www.linkedin.com/in/sudiptoacharjeedhrubo/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="link-u" href="projects.html">Projects</a>
+          <a class="link-u" href="certificates.html">Certificates</a>
+          <a class="link-u" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="wrap foot__bar">
+      <span>© <span data-year>2026</span> Sudipto Acharjee Dhrubo</span>
+      <span class="mono">Dhaka time <span data-clock>--:--:--</span></span>
+      <a class="link-u" href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

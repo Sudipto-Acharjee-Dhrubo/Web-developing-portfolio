@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Certificates · Sudipto Acharjee Dhrubo</title>
+  <meta name="description" content="Certificates earned by Sudipto Acharjee Dhrubo: NASA Space Apps, Google Cloud AI and ML, UNESCO-ICHEI micro-certifications, Mastercard and Deloitte job simulations.">
+  <meta name="theme-color" content="#edeff4">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%233b2fff'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='28' text-anchor='middle' fill='white'%3ESD%3C/text%3E%3C/svg%3E">
+  <script>
+    /* Apply the saved or system theme before first paint to avoid a flash. */
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/certificates.css">
+</head>
+<body class="page-certs">
+  <a class="skip" href="#certs">Skip to content</a>
+
+  <!-- ===== Navbar ===== -->
+  <header class="nav">
+    <a class="nav__brand" href="index.html" aria-label="Sudipto Acharjee Dhrubo, home">
+      <span class="nav__mark">SD</span>
+      <span class="nav__name">Sudipto Acharjee Dhrubo</span>
+    </a>
+    <nav class="nav__pill" aria-label="Primary">
+      <span class="nav__slider" aria-hidden="true"></span>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="certificates.html" aria-current="page">Certificates</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav__menu" type="button" aria-expanded="false">Menu</button>
+  </header>
+
+  <button class="cord" type="button" aria-label="Switch between light and dark theme" title="Pull to switch theme">
+    <span class="cord__line"></span><span class="cord__bead"></span>
+  </button>
+
+  <main>
+    <section class="phead" aria-labelledby="ptitle">
+      <div class="phead__dots" aria-hidden="true"></div>
+      <div class="wrap phead__inner">
+        <p class="phead__prompt"><b>~/dhrubo</b> $ ls certificates/<span class="phead__caret" aria-hidden="true"></span></p>
+        <h1 class="phead__title" id="ptitle">Certificates</h1>
+        <div class="phead__row">
+          <p class="phead__lede">Courses, simulations and a hackathon, collected over the last year. Open any card to read the full certificate.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cgrid-wrap" id="certs" aria-label="Certificate list">
+      <div class="wrap">
+        <div class="pfilter" data-filters role="group" aria-label="Filter certificates">
+          <button type="button" data-f="all" aria-pressed="true">All</button>
+          <button type="button" data-f="ai" aria-pressed="false">AI and ML</button>
+          <button type="button" data-f="sim" aria-pressed="false">Job simulations</button>
+          <button type="button" data-f="event" aria-pressed="false">Competition</button>
+          <button type="button" data-f="uni" aria-pressed="false">ULAB</button>
+          <span class="pfilter__count" data-count aria-live="polite"></span>
+        </div>
+        <div class="cgrid" data-cert-grid></div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="viewer" data-viewer aria-label="Certificate viewer">
+    <div class="viewer__inner">
+      <div class="viewer__stage"><img class="viewer__img" data-v-img alt="" decoding="async"></div>
+      <div class="viewer__bar">
+        <div>
+          <p class="viewer__title" data-v-title></p>
+          <p class="viewer__sub" data-v-sub></p>
+          <p class="viewer__note" data-v-note></p>
+        </div>
+        <div class="viewer__act">
+          <a class="vbtn" data-v-pdf href="#" target="_blank" rel="noopener" hidden>PDF</a>
+          <button class="vbtn" type="button" data-v-prev aria-label="Previous certificate">←</button>
+          <button class="vbtn" type="button" data-v-next aria-label="Next certificate">→</button>
+          <button class="vbtn" type="button" data-v-close>Close</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="foot">
+    <div class="wrap foot__grid">
+      <div class="foot__sig" aria-hidden="true" title="ধ্রুব (dhrubo): constant, fixed star">ধ্রুব</div>
+      <div>
+<pre class="foot__code"><span class="k">const</span> dhrubo = <span class="f">Object</span>.<span class="f">freeze</span>({
+  meaning: <span class="s">"constant"</span>,   <span class="c">// ধ্রুব, the fixed star</span>
+  keeps:   [<span class="s">"curiosity"</span>, <span class="s">"shipping"</span>],
+});</pre>
+        <div class="foot__links">
+          <a class="link-u" href="https://github.com/Sudipto-Acharjee-Dhrubo" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="link-u" href="https://www.linkedin.com/in/sudiptoacharjeedhrubo/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="link-u" href="projects.html">Projects</a>
+          <a class="link-u" href="certificates.html">Certificates</a>
+          <a class="link-u" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="wrap foot__bar">
+      <span>© <span data-year>2026</span> Sudipto Acharjee Dhrubo</span>
+      <span class="mono">Dhaka time <span data-clock>--:--:--</span></span>
+      <a class="link-u" href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/certificates.js"></script>
+</body>
+</html>

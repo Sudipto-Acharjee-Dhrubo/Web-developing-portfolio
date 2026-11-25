@@ -1,179 +1,273 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web-developing-portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/portfolio.css">
-    <script src="https://kit.fontawesome.com/d836d8ac1e.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sudipto Acharjee Dhrubo</title>
+  <meta name="description" content="Sudipto Acharjee Dhrubo is a final-semester Computer Science and Engineering student at ULAB, majoring in Data Science with a minor in Electrical and Electronic Engineering. About me, where I study and what I am doing now.">
+  <meta name="theme-color" content="#edeff4">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%233b2fff'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='28' text-anchor='middle' fill='white'%3ESD%3C/text%3E%3C/svg%3E">
+  <script>
+    /* Apply the saved or system theme before first paint to avoid a flash. */
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preload" href="assets/sudipto.gif" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
-<body class="josefin-sans-normie">
-    <header class="header secondary-background">
-        <nav>
-            <h3 class="nav-title">S<span class="text-primary">A</span>D</h3>
-            <ul>
-                <li><a class="dark-2" href="">Portfolio</a></li>
-                <li><a class="dark-2" href="">BLOG</a></li>
-                <li><a href=""><button class="btn-primary">Hire Me</button></a></li>
-            </ul>
-        </nav>
-        <div class="banner">
-            <div class="banner-content">              
-                <h4 class="banner-greetings dark-2">Hi, I am</h4>
-                <h1 class="banner-tilte">Sudipto Acharjee Dhrubo</h1>
-                <p class="banner-description "> a dedicated web developer with a passion for creating sleek, functional, and user-centric websites. 
-                    I specialize in front-end development, responsive design, and turning ideas into digital reality. With a strong eye for detail and a 
-                    love for problem-solving, I strive to deliver seamless online experiences. Let’s connect and build something extraordinary!
-                </p>
-                <button class="btn-primary"><i class="fa-solid fa-file-arrow-down"></i>  Download CV</button>
-                <button class="btn-primary"><i class="fa-solid fa-phone"></i> Contact</button>
-            </div>
-            <img class="banner-profilepic" src="images/prof sudipto.png" alt="">
-        </div>
-    </header>
-    <main>
-        <section class="about secondary-background">
-            <h3 class="section-title"><i class="fa-solid fa-address-card"></i> About Me</h3>
-            <p class="section-description">I’m a Web Developer, Graphics Designer, and 
-                Programmer with a passion for creating modern, responsive, and visually appealing digital solutions. 
-                I specialize in delivering high-quality work within time and budget, ensuring it meets and exceeds client 
-                requirements. Let’s collaborate and bring your ideas to life!</p>
-                <div class="about-items">
-                   <!-- .about-item*4>p.item-title+p.item-description-->
-                   <div class="about-item">
-                    <p class="item-title">Name</p>
-                    <p class="item-description">Sudipto Acharjee Dhrubo</p>
-                   </div>
-                   <div class="about-item">
-                    <p class="item-title"><i class="fa-solid fa-paper-plane"></i> Email</p>
-                    <p class="item-description">sad160027@gmail.com</p>
-                   </div>
-                   <div class="about-item">
-                    <p class="item-title">Date of Birth</p>
-                    <p class="item-description">June 11, 2002</p>
-                   </div>
-                   <div class="about-item">
-                    <p class="item-title"><i class="fa-solid fa-location-dot"></i>  From</p>
-                    <p class="item-description">Ganderia,Dhaka-1204</p>
-                   </div>       
-                </div>
-        </section>
-        <!--what is do section start-->
-        <section class="skills">
-            <h3 class="section-title text-centre"><i class="fa-solid fa-laptop-file"></i> What I do</h3>
-            <p class="section-description text-centre">I specialize in building modern, responsive websites, designing eye-catching graphics, and developing efficient software applications. 
-                My focus is on delivering high-quality work that meets client requirements, all while staying within the agreed timeline and budget. Whether it’s crafting a seamless user experience, 
-                designing a stunning logo, or solving complex programming challenges, I bring creativity and technical expertise to every project. 
-                Let’s collaborate and bring your ideas to life!</p>
+<body class="page-home">
+  <a class="skip" href="#about">Skip to content</a>
 
-                <div class="skills-container">
-                  <!-- .skill*4>img+h4.skill-title+p.skill-description -->
-                  <div class="skill">
-                    <img src="images/icons/react.png" alt="">
-                    <h4 class="skill-title">React</h4>
-                    <p class="skill-description"> A powerful JavaScript library used to build dynamic and 
-                        interactive user interfaces. My expertise includes creating reusable components, managing 
-                        state with libraries like Redux or Context API, and leveraging JSX for efficient coding. 
-                        I am well-versed in modern JavaScript (ES6+), HTML5, CSS3, and version control systems like Git.</p>
-                  </div>
-                  <div class="skill">
-                    <img src="images/icons/nodejs.png" alt="">
-                    <h4 class="skill-title">NODE Js</h4>
-                    <p class="skill-description">I am proficient in Node.js, utilizing it to build scalable server-side applications and RESTful APIs. 
-                        My expertise includes working with frameworks like Express.js, integrating databases such as MongoDB and MySQL, and ensuring 
-                        robust security measures.</p>
-                  </div>
-                  <div class="skill">
-                    <img src="images/icons/js.png" alt="">
-                    <h4 class="skill-title">Vanilla Javascript</h4>
-                    <p class="skill-description">Specialize in Vanilla JavaScript, leveraging its core features to build dynamic and interactive web applications. 
-                        My skills include DOM manipulation, event handling, asynchronous programming (Promises, Async/Await), and modern ES6+ syntax. I focus on 
-                        writing clean, efficient, and scalable code to create seamless user experiences without relying on frameworks.</p>
-                  </div>
-                  <div class="skill">
-                    <img src="images/icons/mongo.png" alt="">
-                    <h4 class="skill-title">Mongo DB</h4>
-                    <p class="skill-description">My expertise includes MongoDB Query Language (MQL), 
-                        schema design, data modeling, indexing, aggregation framework, replication, and 
-                        sharding. I am skilled in performance tuning and troubleshooting database bottlenecks 
-                        to ensure efficient data retrieval and storage. </p>
-                  </div>
-                </div>
-        </section>
-        <section class="resume">
-            <h3 class="section-title text-centre"><i class="fa-regular fa-rectangle-list"></i> A Summary of My Resume</h3>
-            <div class="resume-container">
-               <div class="resume-column">
-                <h3 class="resume-column-title"><i class="fa-solid fa-user-graduate"></i>  My Education</h3>
-                <div class="experience">
-                    <h4experience-title>BSC in Computer Sceince & Engineering </h4experience-title>
-                    <h5 class="experience-sub-title">University OF Liberal Arts Bangladesh /2022- </h5>
-                    <div class="experience-description">CGPA-1.25</div>
-                </div>
-                <hr>
-                <div class="experience">
-                    <h4experience-title>Higher Secondary Certificate </h4experience-title>
-                    <h5 class="experience-sub-title">Dhaka Imperial College / 2019-2021</h5>
-                    <div class="experience-description">GPA-4.50</div>
-                </div>
-                <hr>
-                <div class="experience">
-                    <h4experience-title>Secondary School Certificate</h4experience-title>
-                     <h5 class="experience-sub-title">Banladesh Bank Adarsha High School / 2007-2019</h5>
-                     <div class="experience-description">GPA-4.56</div>
-                </div>
-               </div>
-               <div class="resume-column">
-                        <h3 class="resume-column-title"><i class="fa-solid fa-briefcase"></i>    My Experience</h3>
-                         <div class="experience">
-                            <h4experience-title>Not updated</h4experience-title>
-                    <h5 class="experience-sub-title">Not updated</h5>
-                    <div class="experience-description">Not updated</div>
-                </div>
-                <hr>
-                <div class="experience">
-                    <h4experience-title>Not updated</h4experience-title>
-                    <h5 class="experience-sub-title">Not updated</h5>
-                    <div class="experience-description">Not updated</div>
-                </div>
-                <hr>
-                <div class="experience">
-                    <h4experience-title>Not updated</h4experience-title>
-                    <h5 class="experience-sub-title">Not updated</h5>
-                    <div class="experience-description">Not updated</div>
-                </div>
-               </div>
-               
-            </div>
-            <div class="text-centre resume-downlod-cv">
-               <button class="btn-primary"><i class="fa-solid fa-file-arrow-down"></i>  Download CV</button>
-             </div>
-        </section>
-    </main>
-    <footer class="secondary-background">
-        <div class="footer-column">
-            <h3 class="sction-title"><i class="fa-solid fa-phone"></i> Let’s Connect</h3>
-            <p>Please fill out the form on this section to contact with 
-                me or call between 9:00 A.M and 8.00 P.M ET, Monday through 
-                Friday.</p>
-                <div>
-                    <a href=""><img src="images/icons/facebook.png" alt=""></a>
-                    <a href=""><img src="images/icons/insta.png" alt=""></a>
-                    <a href=""><img src="images/icons/twitter.png" alt=""></a>
-                </div>
+  <!-- ===== Navbar ===== -->
+  <header class="nav">
+    <a class="nav__brand" href="index.html" aria-label="Sudipto Acharjee Dhrubo, home">
+      <span class="nav__mark">SD</span>
+      <span class="nav__name">Sudipto Acharjee Dhrubo</span>
+    </a>
+    <nav class="nav__pill" aria-label="Primary">
+      <span class="nav__slider" aria-hidden="true"></span>
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav__menu" type="button" aria-expanded="false">Menu</button>
+  </header>
+
+  <button class="cord" type="button" aria-label="Switch between light and dark theme" title="Pull to switch theme">
+    <span class="cord__line"></span><span class="cord__bead"></span>
+  </button>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero__dots" aria-hidden="true"></div>
+      <div class="hero__circuit" aria-hidden="true"></div>
+
+      <div class="wrap hero__inner">
+        <p class="hero__hello serif">Hello, I’m Sudipto Acharjee
+          <span class="hero__role" aria-live="off"><span data-role>CSE student</span></span>
+        </p>
+
+        <h1 class="wordmark" id="hero-title" aria-label="Sudipto Acharjee Dhrubo">
+          <span class="wordmark__l" aria-hidden="true">D</span><span class="wordmark__l" aria-hidden="true">H</span><span class="wordmark__l" aria-hidden="true">R</span><span class="wordmark__l" aria-hidden="true">U</span><span class="wordmark__l" aria-hidden="true">B</span><span class="wordmark__l" aria-hidden="true">O</span>
+        </h1>
+
+        <div class="hero__copy">
+          <p class="hero__lede">Final-semester CSE student at ULAB. I build machine learning that runs in the browser, APIs that ship in containers, and a capstone that knows when to say it isn’t sure.</p>
+          <div class="hero__cta">
+            <a class="btn btn--solid" href="projects.html">See my projects</a>
+            <a class="btn btn--ghost" href="https://github.com/Sudipto-Acharjee-Dhrubo" target="_blank" rel="noopener">GitHub <span class="btn__ico" aria-hidden="true">↗</span></a>
+          </div>
         </div>
-        <div class="footer-column">
-            <h3 class="sction-title"><i class="fa-solid fa-comment-sms"></i> Let’s Massage me</h3>
-            <form action="">
-                <input type="text" name="" id="" placeholder="Your Name">
-                <input type="email" name="" id="" placeholder="Your E-mail">
-                <textarea name="" id="" cols="40" rows="5" placeholder="Massage"></textarea>
-                ,<input class="btn-primary" type="submit" value="'Submit">
-            </form>
+
+        <figure class="hero__photo" data-depth="10">
+          <img src="assets/sudipto.gif" width="764" height="510" alt="Animated portrait of Sudipto Acharjee Dhrubo in a black blazer, adjusting his watch" fetchpriority="high" decoding="async">
+        </figure>
+
+        <!-- Floating UI, layered behind and in front of the portrait -->
+        <div class="chip chip--term" data-depth="22" aria-hidden="true">
+          <span class="chip__prompt">$</span> whoami<span class="chip__caret"></span>
         </div>
-    </footer>
+        <div class="chip chip--build" data-depth="30" aria-hidden="true">
+          <span class="chip__dot"></span> build passing
+        </div>
+        <div class="chip chip--school" data-depth="16">
+          <strong>ULAB</strong> · final semester
+        </div>
+
+        <aside class="snippet" data-depth="34" aria-label="About me, written as code">
+          <div class="snippet__bar"><i></i><i></i><i></i><span>dhrubo.js</span></div>
+<pre class="snippet__code" data-snippet></pre>
+        </aside>
+
+        <a class="scrollcue" href="#about" aria-label="Scroll to the about section">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <defs><path id="cue-circle" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs>
+            <text><textPath href="#cue-circle" startOffset="0">scroll down · scroll down · scroll down · </textPath></text>
+          </svg>
+          <span class="scrollcue__arrow" aria-hidden="true">↓</span>
+        </a>
+
+        <p class="hero__status"><span class="chip__dot"></span> Open to opportunities <span class="hero__sep" aria-hidden="true"></span> Bangladesh</p>
+      </div>
+    </section>
+
+    <!-- ===== About + terminal ===== -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="wrap about__grid">
+        <div class="about__text">
+          <h2 class="about__h serif" id="about-title">I like knowing why a thing works, then making it small enough to run on your own device.</h2>
+          <p>SignLens and FaceRoll both run entirely in the browser, so no video ever leaves the machine. My capstone, DermoVLM-C, puts a second layer on top of a classifier: it explains its answer, and it abstains when it isn’t sure.</p>
+          <dl class="about__facts">
+            <div><dt>Work</dt><dd>Part-time Data Annotator at Genmorphics AI</dd></div>
+            <div><dt>Always at my PC</dt><dd>Coding, gaming, drawing, films</dd></div>
+          </dl>
+        </div>
+
+        <div class="term" id="terminal" aria-label="Interactive terminal">
+          <div class="term__bar">
+            <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="term__title">sudipto@ulab: ~</span>
+            <span class="term__hint">type help</span>
+          </div>
+          <div class="term__body" data-term-out role="log" aria-live="polite"></div>
+          <form class="term__form" data-term-form autocomplete="off">
+            <label for="term-in" class="term__ps1">❯</label>
+            <input id="term-in" class="term__in" type="text" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Terminal command">
+          </form>
+          <div class="term__chips" data-term-chips aria-label="Suggested commands"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Where I study + right now ===== -->
+    <section class="study" id="study" aria-labelledby="study-title">
+      <div class="wrap study__grid">
+        <div class="study__main">
+          <h2 class="sec-head__t serif" id="study-title">Where I study</h2>
+          <p class="study__uni serif">University of Liberal Arts Bangladesh</p>
+          <dl class="about__facts">
+            <div><dt>Degree</dt><dd>B.Sc. in Computer Science &amp; Engineering</dd></div>
+            <div><dt>Major</dt><dd>Data Science</dd></div>
+            <div><dt>Minor</dt><dd>Electrical &amp; Electronic Engineering</dd></div>
+            <div><dt>Stage</dt><dd>Final semester</dd></div>
+          </dl>
+        </div>
+
+        <aside class="now" aria-labelledby="now-title">
+          <h3 class="now__t" id="now-title"><span class="chip__dot"></span> Right now</h3>
+          <ul class="now__list">
+            <li><strong>Wrapping up my capstone.</strong> DermoVLM-C (CSE 4098) is an explainable vision-language framework for skin-lesion classification.</li>
+            <li><strong>Working part-time.</strong> I’m a Data Annotator at Genmorphics AI, labelling the data that machine-learning models learn from.</li>
+            <li><strong>Balancing two disciplines.</strong> Circuits and power systems sit next to software, and each makes me better at the other.</li>
+            <li><strong>Getting ready for what comes next.</strong> Building this portfolio and looking at jobs and graduate programmes.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== Toolkit graph ===== -->
+    <section class="toolkit" id="toolkit" aria-labelledby="toolkit-title">
+      <div class="wrap">
+        <header class="sec-head">
+          <h2 class="sec-head__t serif" id="toolkit-title">Tools, and what I used them for</h2>
+          <p class="sec-head__d">Hover or focus a node to see where it showed up. Lines connect tools that work together.</p>
+        </header>
+
+        <div class="graph" data-graph>
+          <svg class="graph__svg" role="group" aria-label="Skill graph"></svg>
+          <div class="graph__hub" data-hub></div>
+          <div class="graph__readout" data-graph-readout aria-live="polite">
+            <span class="graph__rk">Pick a node</span>
+            <span class="graph__rv">Each one is something I have actually used in a project.</span>
+          </div>
+        </div>
+
+        <!-- phones: the portrait sits above the compact list -->
+        <div class="hub-m" data-hub-m></div>
+
+        <!-- compact version for small screens -->
+        <div class="toolkit__list" data-skill-list></div>
+      </div>
+    </section>
+
+    <!-- ===== Problem-solving toy ===== -->
+    <section class="play" id="play" aria-labelledby="play-title">
+      <div class="wrap play__grid">
+        <div class="play__text">
+          <h2 class="sec-head__t serif" id="play-title">Draw a maze. Watch A* solve it.</h2>
+          <p>Click or drag to place walls. Move the start and goal if you like, then run the search. It always expands the cheapest-looking cell first, which is how I try to approach most problems: decide what “closer” means, then commit.</p>
+          <div class="play__btns">
+            <button class="btn btn--solid" type="button" data-pf="run">Run A*</button>
+            <button class="btn btn--ghost" type="button" data-pf="maze">Random maze</button>
+            <button class="btn btn--ghost" type="button" data-pf="clear">Clear</button>
+          </div>
+          <p class="play__stats" data-pf-stats aria-live="polite">Draw some walls, then press Run.</p>
+        </div>
+        <div class="play__board">
+          <canvas data-pf-canvas aria-label="Pathfinding grid. Click or drag to draw walls." role="img"></canvas>
+          <ul class="play__key" aria-hidden="true">
+            <li><i class="k-start"></i>Start</li><li><i class="k-goal"></i>Goal</li>
+            <li><i class="k-seen"></i>Explored</li><li><i class="k-path"></i>Path</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Currently learning ===== -->
+    <section class="learning" id="learning" aria-labelledby="learning-title">
+      <div class="wrap learning__grid">
+        <header class="sec-head sec-head--col">
+          <h2 class="sec-head__t serif" id="learning-title">Currently learning</h2>
+          <p class="sec-head__d">The list changes every few months. That is the point.</p>
+        </header>
+        <div class="log" data-learning aria-label="Learning log"></div>
+      </div>
+    </section>
+
+    <!-- ===== Keep exploring ===== -->
+    <section class="explore" aria-labelledby="explore-title">
+      <div class="wrap">
+        <h2 class="sr-only" id="explore-title">Explore the rest of the site</h2>
+        <a class="explore__row" href="projects.html" data-cursor="Open">
+          <span class="explore__t serif">Projects</span>
+          <span class="explore__d">The capstone and everything I have built</span>
+          <span class="explore__a" aria-hidden="true">→</span>
+        </a>
+        <a class="explore__row" href="certificates.html" data-cursor="Open">
+          <span class="explore__t serif">Certificates</span>
+          <span class="explore__d">Courses, workshops and awards</span>
+          <span class="explore__a" aria-hidden="true">→</span>
+        </a>
+        <a class="explore__row" href="contact.html" data-cursor="Open">
+          <span class="explore__t serif">Contact</span>
+          <span class="explore__d">Say hello, ask a question, start something</span>
+          <span class="explore__a" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer: a commit message as a signature ===== -->
+  <footer class="foot">
+    <div class="wrap foot__grid">
+      <div class="foot__sig" aria-hidden="true" title="ধ্রুব (dhrubo): constant, fixed star">ধ্রুব</div>
+      <div>
+<pre class="foot__code"><span class="k">const</span> dhrubo = <span class="f">Object</span>.<span class="f">freeze</span>({
+  meaning: <span class="s">"constant"</span>,   <span class="c">// ধ্রুব, the fixed star</span>
+  keeps:   [<span class="s">"curiosity"</span>, <span class="s">"shipping"</span>],
+});</pre>
+        <div class="foot__links">
+          <a class="link-u" href="https://github.com/Sudipto-Acharjee-Dhrubo" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="link-u" href="https://www.linkedin.com/in/sudiptoacharjeedhrubo/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="link-u" href="projects.html">Projects</a>
+          <a class="link-u" href="certificates.html">Certificates</a>
+          <a class="link-u" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="wrap foot__bar">
+      <span>© <span data-year>2026</span> Sudipto Acharjee Dhrubo</span>
+      <span class="mono">Dhaka time <span data-clock>--:--:--</span></span>
+      <a class="link-u" href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/home-hero.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/graph.js"></script>
+  <script src="js/pathfinder.js"></script>
+  <script src="js/learning.js"></script>
 </body>
 </html>

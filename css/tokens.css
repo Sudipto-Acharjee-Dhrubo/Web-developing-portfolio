@@ -1,0 +1,133 @@
+/* ==========================================================================
+   tokens.css — fonts, colour, type scale, spacing. Shared by every page.
+   Palette: cool paper + deep navy ink + one ultramarine accent.
+   ========================================================================== */
+
+/* Display: Bevan, a heavy slab serif with a poster / type-specimen feel.
+   Text: Zilla Slab, a friendlier slab that stays readable at body sizes. */
+@font-face {
+  font-family: "Bevan";
+  src: url("../assets/fonts/bevan.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Zilla Slab";
+  src: url("../assets/fonts/zilla-slab-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Zilla Slab";
+  src: url("../assets/fonts/zilla-slab-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Zilla Slab";
+  src: url("../assets/fonts/zilla-slab-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Zilla Slab";
+  src: url("../assets/fonts/zilla-slab-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../assets/fonts/jetbrains-mono.woff2") format("woff2");
+  font-weight: 100 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("../assets/fonts/noto-serif-bengali-700.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  /* colour — light */
+  --paper: #edeff4;
+  --paper-2: #e1e5ee;
+  --card: #f8f9fc;
+  --ink: #0d1224;
+  --ink-2: #474e66;
+  --ink-3: #848ba3;
+  --line: rgba(13, 18, 36, 0.12);
+  --line-strong: rgba(13, 18, 36, 0.28);
+  --accent: #3b2fff;
+  --accent-ink: #ffffff;
+  --accent-soft: rgba(59, 47, 255, 0.1);
+  --accent-2: #8a3ffc;
+  --accent-2-soft: rgba(138, 63, 252, 0.12);
+  --ok: #0c8a64;
+  --warn: #c2410c;
+
+  /* syntax highlighting */
+  --syn-key: #3b2fff;
+  --syn-str: #0c8a64;
+  --syn-num: #c2410c;
+  --syn-fn: #8a3ffc;
+  --syn-com: #848ba3;
+
+  --shadow-1: 0 1px 0 rgba(13, 18, 36, 0.04), 0 12px 32px -16px rgba(13, 18, 36, 0.28);
+  --shadow-2: 0 2px 0 rgba(13, 18, 36, 0.04), 0 28px 60px -24px rgba(30, 24, 120, 0.4);
+
+  /* type */
+  --font-sans: "Zilla Slab", Rockwell, "Roboto Slab", Georgia, serif;
+  --font-serif: "Bevan", "Rockwell Extra Bold", Georgia, serif; /* display */
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --font-bn: "Noto Serif Bengali", "Bevan", serif;
+
+  --step--1: clamp(0.8rem, 0.78rem + 0.1vw, 0.875rem);
+  --step-0: clamp(1.08rem, 1.02rem + 0.2vw, 1.18rem);
+  --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.45rem);
+  --step-2: clamp(1.6rem, 1.3rem + 1.4vw, 2.3rem);
+  --step-3: clamp(2.2rem, 1.6rem + 3vw, 4rem);
+  --step-4: clamp(2.8rem, 1.8rem + 5vw, 6rem);
+
+  /* layout */
+  --gutter: clamp(1rem, 4vw, 3rem);
+  --maxw: 1320px;
+  --radius-s: 10px;
+  --radius-m: 18px;
+  --radius-l: 28px;
+  --ease: cubic-bezier(0.2, 0.7, 0.1, 1);
+  --nav-h: 64px;
+}
+
+:root[data-theme="dark"] {
+  /* near-black, amber-yellow and violet */
+  --paper: #07070c;
+  --paper-2: #100e18;
+  --card: #0d0c14;
+  --ink: #f4efe4;
+  --ink-2: #b9b3c6;
+  --ink-3: #777088;
+  --line: rgba(244, 239, 228, 0.11);
+  --line-strong: rgba(244, 239, 228, 0.28);
+  --accent: #ffb21f;
+  --accent-2: #9a63ff;
+  --accent-ink: #15100a;
+  --accent-soft: rgba(255, 178, 31, 0.13);
+  --accent-2-soft: rgba(154, 99, 255, 0.16);
+  --ok: #4fd6a8;
+  --warn: #ff9b62;
+
+  --syn-key: #ffb21f;
+  --syn-str: #4fd6a8;
+  --syn-num: #ff8a4c;
+  --syn-fn: #b48cff;
+  --syn-com: #777088;
+
+  --shadow-1: 0 1px 0 rgba(255, 255, 255, 0.03), 0 14px 36px -16px rgba(0, 0, 0, 0.75);
+  --shadow-2: 0 2px 0 rgba(255, 255, 255, 0.03), 0 30px 70px -24px rgba(154, 99, 255, 0.4);
+}

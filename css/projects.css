@@ -1,0 +1,64 @@
+/* ==========================================================================
+   projects.css — the projects page. Card styles themselves live in home.css.
+   ========================================================================== */
+:root[data-theme="dark"] body.page-projects {
+  background-image:
+    radial-gradient(65vw 55vh at 92% -8%, rgba(154, 99, 255, 0.22), transparent 70%),
+    radial-gradient(55vw 50vh at 4% 108%, rgba(255, 178, 31, 0.11), transparent 70%);
+  background-attachment: fixed;
+}
+
+.phead { position: relative; padding: clamp(7rem, 12vw, 10rem) 0 clamp(2rem, 4vw, 3.4rem); overflow: hidden; }
+.phead__dots {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(var(--line) 1px, transparent 1.2px); background-size: 24px 24px;
+  -webkit-mask-image: linear-gradient(to bottom, #000 40%, transparent); mask-image: linear-gradient(to bottom, #000 40%, transparent);
+}
+.phead__inner { position: relative; display: grid; gap: 1.4rem; }
+.phead__prompt { font: 500 0.95rem var(--font-mono); color: var(--ink-3); }
+.phead__prompt b { color: var(--accent); font-weight: 600; }
+.phead__caret { display: inline-block; width: 8px; height: 1em; margin-left: 4px; vertical-align: -2px; background: var(--accent); animation: blink 1s steps(2) infinite; }
+.phead__title { font-family: var(--font-serif); font-weight: 400; font-size: clamp(3.6rem, 2rem + 10vw, 10rem); line-height: 0.92; letter-spacing: 0; }
+.phead__row { display: flex; justify-content: space-between; align-items: end; gap: 2rem; flex-wrap: wrap; }
+.phead__lede { max-width: 46ch; color: var(--ink-2); font-size: var(--step-1); }
+
+.pfilter { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; padding-bottom: 2rem; }
+.pfilter button {
+  padding: 0.5rem 1.05rem; border-radius: 999px; border: 1px solid var(--line-strong);
+  font-weight: 600; font-size: 0.95rem; color: var(--ink-2);
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+.pfilter button:hover { border-color: var(--accent); color: var(--accent); }
+.pfilter button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.pfilter__count { margin-left: auto; font: 500 0.9rem var(--font-mono); color: var(--ink-3); }
+
+.page-projects .work { padding-top: 0; }
+.page-projects .work__grid { grid-template-columns: repeat(12, 1fr); }
+.page-projects .pcard { grid-column: span 4; margin-top: 0 !important; }
+.page-projects .pcard--featured { grid-column: span 12; }
+.page-projects .pcard[hidden] { display: none; }
+.page-projects .pcard[data-id="signlens"], .page-projects .pcard[data-id="faceroll"] { grid-column: span 4; }
+.pcard__badge { font: 600 0.72rem var(--font-mono); padding: 0.15rem 0.55rem; border-radius: 999px; background: var(--accent); color: var(--accent-ink); }
+.v-trail { stroke-dasharray: 150; stroke-dashoffset: 0; }
+.pcard:hover .v-trail, .pcard:focus-within .v-trail { animation: ecg 2.4s linear infinite; }
+.pmore {
+  grid-column: span 8; display: grid; align-content: center; gap: 0.7rem; padding: clamp(1.4rem, 3vw, 2.6rem);
+  border: 1px dashed var(--line-strong); border-radius: var(--radius-m); min-height: 200px;
+  transition: border-color 0.3s, background 0.3s, transform 0.4s var(--ease);
+}
+.pmore[hidden] { display: none; }
+.pmore:hover, .pmore:focus-visible { border-color: var(--accent); background: var(--accent-soft); transform: translateY(-4px); }
+.pmore__code { color: var(--ink-3); font-size: 0.9rem; }
+.pmore__t { font-family: var(--font-serif); font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.6rem); line-height: 1.1; }
+.pmore__s { color: var(--ink-2); }
+.pempty { padding: 3rem 0; color: var(--ink-3); }
+
+@media (max-width: 1000px) {
+  .page-projects .pcard, .page-projects .pcard[data-id="signlens"], .page-projects .pcard[data-id="faceroll"] { grid-column: span 6; }
+  .page-projects .pcard--featured { grid-column: span 12; }
+  .pmore { grid-column: span 12; }
+}
+@media (max-width: 640px) {
+  .page-projects .pcard, .page-projects .pcard[data-id="signlens"], .page-projects .pcard[data-id="faceroll"] { grid-column: span 12; }
+  .pfilter__count { margin-left: 0; width: 100%; }
+}

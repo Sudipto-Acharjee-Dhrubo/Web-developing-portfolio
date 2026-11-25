@@ -1,0 +1,167 @@
+/* ==========================================================================
+   components.css — navbar, theme cord, buttons, tags, cursor, footer.
+   Shared by every page so the system stays consistent.
+   ========================================================================== */
+
+/* ---------- Navbar ---------- */
+.nav {
+  position: fixed; inset: 0 0 auto 0; z-index: 50;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px var(--gutter);
+  pointer-events: none;
+}
+.nav > * { pointer-events: auto; }
+
+.nav__brand { display: inline-flex; align-items: center; gap: 0.6rem; font-weight: 600; letter-spacing: -0.01em; }
+.nav__mark {
+  display: grid; place-items: center; width: 36px; height: 36px;
+  border-radius: 11px; background: var(--ink); color: var(--paper);
+  font-family: var(--font-serif); font-size: 0.82rem; font-weight: 400; letter-spacing: 0.02em;
+  transition: transform 0.4s var(--ease), background-color 0.4s;
+}
+.nav__brand:hover .nav__mark { transform: rotate(-8deg) scale(1.06); background: var(--accent); color: var(--accent-ink); }
+.nav__name { font-size: 0.95rem; color: var(--ink-2); }
+
+.nav__pill {
+  position: absolute; left: 50%; transform: translateX(-50%);
+  display: flex; gap: 2px; padding: 5px;
+  background: color-mix(in srgb, var(--card) 78%, transparent);
+  backdrop-filter: blur(14px) saturate(1.4);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  border: 1px solid var(--line); border-radius: 999px;
+  box-shadow: var(--shadow-1);
+}
+.nav__pill a {
+  position: relative; z-index: 1;
+  padding: 0.5rem 1.05rem; border-radius: 999px;
+  font-size: 0.9rem; font-weight: 500; color: var(--ink-2);
+  transition: color 0.25s;
+}
+.nav__pill a:hover { color: var(--ink); }
+.nav__pill a[aria-current="page"] { color: var(--paper); }
+.nav__slider {
+  position: absolute; z-index: 0; top: 5px; bottom: 5px; left: 0; width: 0;
+  border-radius: 999px; background: var(--ink);
+  transition: transform 0.45s var(--ease), width 0.45s var(--ease), background-color 0.3s;
+}
+.nav__slider.is-hover { background: var(--accent); }
+.nav__pill:has(a:not([aria-current]):hover) a[aria-current="page"] { color: var(--ink-2); }
+.nav__pill:has(a:not([aria-current]):hover) a:hover { color: var(--accent-ink); }
+
+.nav__menu {
+  display: none; padding: 0.5rem 1rem; border-radius: 999px;
+  background: var(--card); border: 1px solid var(--line); font-size: 0.9rem; font-weight: 500;
+}
+
+/* ---------- Theme cord (pull to switch) ---------- */
+.cord {
+  position: fixed; top: 0; right: clamp(14px, 3.2vw, 44px); z-index: 60;
+  width: 28px; height: 96px; display: flex; flex-direction: column; align-items: center;
+  transform-origin: 50% 0; cursor: pointer;
+}
+.cord__line { width: 1.5px; flex: 1; background: var(--ink); opacity: 0.55; }
+.cord__bead {
+  width: 14px; height: 18px; border-radius: 40% 40% 50% 50%;
+  background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft);
+  transition: box-shadow 0.3s;
+}
+.cord:hover .cord__bead { box-shadow: 0 0 0 7px var(--accent-soft); }
+.cord.is-pulled { animation: cord-pull 0.9s var(--ease); }
+@keyframes cord-pull {
+  0% { transform: translateY(0) rotate(0); }
+  18% { transform: translateY(18px) rotate(0); }
+  45% { transform: translateY(-4px) rotate(5deg); }
+  70% { transform: translateY(2px) rotate(-3deg); }
+  100% { transform: translateY(0) rotate(0); }
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  padding: 0.85rem 1.35rem; border-radius: 999px;
+  font-weight: 600; font-size: 0.95rem; letter-spacing: -0.005em;
+  border: 1px solid transparent;
+  transition: transform 0.35s var(--ease), background-color 0.25s, color 0.25s, border-color 0.25s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn--solid { background: var(--ink); color: var(--paper); }
+.btn--solid:hover { background: var(--accent); color: var(--accent-ink); }
+.btn--ghost { border-color: var(--line-strong); color: var(--ink); }
+.btn--ghost:hover { border-color: var(--accent); color: var(--accent); }
+.btn__ico { transition: transform 0.35s var(--ease); }
+.btn:hover .btn__ico { transform: translate(2px, -2px); }
+
+/* ---------- Tags & links ---------- */
+.tag {
+  display: inline-block; padding: 0.22rem 0.62rem; border-radius: 999px;
+  border: 1px solid var(--line); font-size: 0.78rem; font-weight: 500; color: var(--ink-2);
+  background: color-mix(in srgb, var(--card) 70%, transparent);
+}
+.link-u {
+  background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1px no-repeat;
+  transition: background-size 0.4s var(--ease), color 0.2s; padding-bottom: 2px;
+}
+.link-u:hover { background-size: 0 1px; background-position: 100% 100%; color: var(--accent); }
+
+/* ---------- Cursor trail (fine pointers only) ---------- */
+.cursor {
+  position: fixed; left: 0; top: 0; z-index: 90; pointer-events: none;
+  width: 30px; height: 30px; margin: -15px 0 0 -15px; border-radius: 50%;
+  border: 1.5px solid var(--accent); opacity: 0;
+  display: grid; place-items: center;
+  transition: width 0.3s var(--ease), height 0.3s var(--ease), margin 0.3s var(--ease),
+              background-color 0.3s, opacity 0.3s, border-color 0.3s;
+  mix-blend-mode: normal;
+}
+.cursor.is-on { opacity: 1; }
+.cursor.is-link { width: 54px; height: 54px; margin: -27px 0 0 -27px; background: var(--accent-soft); }
+.cursor__label { font-size: 0.68rem; font-weight: 600; color: var(--accent); opacity: 0; transition: opacity 0.2s; }
+.cursor.is-label { width: 72px; height: 72px; margin: -36px 0 0 -36px; background: var(--accent); }
+.cursor.is-label .cursor__label { opacity: 1; color: var(--accent-ink); }
+@media (pointer: coarse) { .cursor { display: none; } }
+
+/* ---------- Footer: a developer's signature ---------- */
+.foot {
+  position: relative; margin-top: clamp(5rem, 10vw, 9rem);
+  border-top: 1px solid var(--line); overflow: hidden;
+  background: linear-gradient(to bottom, transparent, var(--paper-2));
+}
+.foot__grid {
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(2rem, 5vw, 5rem);
+  padding-block: clamp(3rem, 6vw, 5.5rem) 2rem; align-items: end;
+}
+.foot__sig {
+  font-family: var(--font-bn); font-weight: 700; line-height: 0.95;
+  font-size: clamp(5.5rem, 17vw, 15rem); letter-spacing: -0.02em;
+  color: transparent; -webkit-text-stroke: 1.5px var(--ink);
+  transition: color 0.6s var(--ease), -webkit-text-stroke-color 0.6s;
+  user-select: none;
+}
+.foot__sig:hover { color: var(--accent); -webkit-text-stroke-color: var(--accent); }
+.foot__code {
+  font-family: var(--font-mono); font-size: 0.82rem; line-height: 1.8; color: var(--ink-2);
+  margin-bottom: 1.4rem; overflow-x: auto; white-space: pre;
+}
+.foot__links { display: flex; flex-wrap: wrap; gap: 0.4rem 1.6rem; font-weight: 500; }
+.foot__bar {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.6rem 2rem;
+  padding-block: 1.2rem 1.6rem; border-top: 1px solid var(--line);
+  font-size: 0.85rem; color: var(--ink-3);
+}
+.foot__bar .mono { font-size: 0.8rem; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .nav__name { display: none; }
+  .nav__menu { display: inline-block; margin-left: auto; margin-right: 52px; }
+  .nav__pill {
+    display: none; position: absolute; top: 64px; left: var(--gutter); right: var(--gutter);
+    transform: none; flex-direction: column; border-radius: var(--radius-m); padding: 8px;
+  }
+  .nav.is-open .nav__pill { display: flex; }
+  .nav__slider { display: none; }
+  .nav__pill a { padding: 0.8rem 1rem; }
+  .nav__pill a[aria-current="page"] { background: var(--ink); }
+  .foot__grid { grid-template-columns: 1fr; }
+  .foot__code { white-space: pre-wrap; font-size: 0.76rem; }
+}
